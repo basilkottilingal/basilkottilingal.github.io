@@ -1,104 +1,415 @@
 <!DOCTYPE html>
+
+<!-- Create the pdf :
+$ wkhtmltopdf   --page-width 150   --page-height 212 --enable-local-file-access resume.html resume.pdf
+-->
+
 <html>
-<head>
-	<title>My CV</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-		}
-		h2 {
-			margin-top: 30px;
-		}
-		h3 {
-			margin-top: 20px;
-		}
-		.section {
-			margin-top: 50px;
-		}
-		.left-column {
-			display: inline-block;
-			vertical-align: top;
-			width: 30%;
-			margin-right: 5%;
-		}
-		.right-column {
-			display: inline-block;
-			vertical-align: top;
-			width: 65%;
-		}
-		.clear {
-			clear: both;
-		}
-	</style>
-</head>
-<body>
-	<h1>My CV</h1>
-	<div class="section">
-		<h2>Personal Information</h2>
-		<div class="left-column">
-			<p>Name:</p>
-			<p>Address:</p>
-			<p>Phone:</p>
-			<p>Email:</p>
-		</div>
-		<div class="right-column">
-			<p>John Doe</p>
-			<p>123 Main St.</p>
-			<p>(123) 456-7890</p>
-			<p>johndoe@example.com</p>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div class="section">
-		<h2>Education</h2>
-		<div class="left-column">
-			<p>Degree:</p>
-			<p>School:</p>
-			<p>Graduation Date:</p>
-		</div>
-		<div class="right-column">
-			<p>Bachelor of Science in Computer Science</p>
-			<p>University of XYZ</p>
-			<p>May 2022</p>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div class="section">
-		<h2>Experience</h2>
-		<h3>Company A</h3>
-		<div class="left-column">
-			<p>Position:</p>
-			<p>Employment Dates:</p>
-		</div>
-		<div class="right-column">
-			<p>Software Developer</p>
-			<p>June 2021 - Present</p>
-		</div>
-		<div class="clear"></div>
-		<p>Description of job responsibilities and accomplishments.</p>
-		<h3>Company B</h3>
-		<div class="left-column">
-			<p>Position:</p>
-			<p>Employment Dates:</p>
-		</div>
-		<div class="right-column">
-			<p>Intern</p>
-			<p>May 2020 - August 2020</p>
-		</div>
-		<div class="clear"></div>
-		<p>Description of job responsibilities and accomplishments.</p>
-	</div>
-	<div class="section">
-		<h2>Skills</h2>
-		<ul>
-			<li>Programming languages: Java, Python, C++</li>
-			<li>Web development: HTML, CSS, JavaScript</li>
-			<li>Other: Git, Linux, Agile development</li>
-		</ul>
-	</div>
-</body>
-</html>
+
+  <head>
+    <title> Ahmed Basil KOTTILINGAL </title>
+    <!--link rel="stylesheet" type="text/css" href="styles.css"-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+
+
+  <div class = "paper">
+  <div class = "container">
+  
+    <div class = "left-container">
+
+
+      <!-- FIRST TILE IN THE LEFT COLUMN -->
+      <!-- PICTURE AND CONTACT DETAILS -->
+			<div class="tile">
+        <!-- PIC
+        <div class="circle-container">
+          <img src="basil.jpeg" alt="photo" style="position: relative; top: 1px; right : 20px">
+          </img>
+        </div-->
+        <h1 style="font-size: 24px; text-align:center"> 
+          <a href="https://basilkottilingal.github.io/" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+            Ahmed Basil KOTTILINGAL
+          </a>
+        </h1>
+        <!-- CONTACT INFO -->
+        <div class="tile-info" style="text-align:center">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            <img src="./icons/location.png" alt="home" class="icon-inline"> Paris, France
+        </div>
+        <div class="tile-info" style="text-align:center">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            <img src="./icons/call.png" alt="call" class="icon-inline"> +33 614744006
+        </div>
+        <div class="tile-info" style="text-align:center">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+              <span>
+                <img src="./icons/email.png" alt="email" class="icon-inline">
+              </span>
+              <span>
+                <a href="mailto:basilkottilingal@gmail.com" style="display: flex; align-items: center; text-decoration: none; gap: 6px;" target="_blank">
+                  basilkottilingal@gmail.com
+                </a>
+              </span>
+        </div>
+			</div> <!-- tile -->
+
+
+      <!-- SECOND TILE IN THE LEFT COLUMN -->
+      <!-- TECHNICAL SKILLS -->
+			<div class="tile" >
+				<h3>
+          <img src="./icons/skills.png" alt="skills" class="icon-inline"> 
+          Technical Skills
+        </h3>
+        <ul class="keywords-head">
+        <!--p> <b> Computer Language: </b> </p-->
+        <li> Computer Languages: </li>
+        <ul class="keywords">
+          <li> C </li>
+          <li> C++ </li>
+          <li> Python </li>
+          <li> Java Script </li>
+        </ul>
+        <!--p> <b> High Perfomrance : </b></p-->
+        <li>High Performance Computing</li>
+        <ul class="keywords">
+          <li> HPC Programming C/C++ </li>
+        </ul>
+        <ul class="keywords">
+          <li> Cuda </li>
+          <li> OpenMP </li>
+          <li> MPI  </li>
+        </ul>
+        <ul class="keywords">
+          <li> Performance Analysis </li>
+        </ul>
+        <ul class="keywords">
+          <li> Super Computer Scheduling </li>
+        </ul>
+        <!--p> Compiler </p-->
+        <li> Compiler Design </li>
+        <ul class="keywords">
+          <li> Lexer, Parser Development</li>
+        </ul>
+        <!--p> Compiler </p-->
+        <li> Graph Analysis </li>
+        <ul class="keywords">
+          <li> Mathematical foundations  </li>
+          <li> Algorithms  </li>
+        </ul>
+        <!--p> Compiler </p-->
+        <li> Data Structure </li>
+        <ul class="keywords">
+          <li> Low Level Database management  </li>
+        <ul class="keywords">
+        </ul>
+          <li> Block-based & Cell-Based AMR Data Structure </li>
+          <li> Surface Mesh (Half Edge Mesh)  </li>
+        </ul>
+        <!--p><b>Computational & Data Analysis: </b></p-->
+        <li>Computational & Data Analysis: </li>
+        <ul class="keywords">
+           <li> Python programming for Image Processing</li>
+        </ul>
+        <!--p><b> Presentation & Communication: </b></p-->       
+        <li> Presentation & Communication: </li>       
+        <ul class="keywords">
+           <li> Strong scientific reporting and presentation skills </li>
+        </ul>
+        </ul>
+			</div> <!-- tile -->
+
+      <!-- THIRD TILE IN THE LEFT COLUMN -->
+      <!-- ACHI SKILLS -->
+			<div class="tile">
+				<h3>
+          <img src="./icons/achievements.png" alt="achi" class="icon-inline"> 
+          Achievements
+        </h3>
+        <ul class="keywords">
+           <li>
+                <a href="https://www.online-inspire.gov.in/Content/SHEFAQs.pdf" style="display: flex; align-items: center; justify-content: center; text-decoration: none; color:inherit" target="_blank">
+              Eligibility for Inspire Scholarship
+                </a>
+           </li>
+        </ul>
+        <ul class="keywords">
+           <li>
+                <a href="https://en.wikipedia.org/wiki/Graduate_Aptitude_Test_in_Engineering" style="display: flex; align-items: center; justify-content: center; text-decoration: none; color:inherit" target="_blank">
+              GATE Qualified (2016), Mechanical Engineering (Rank 83)
+                </a>
+           </li>
+        </ul>
+        <ul class="keywords">
+           <li>
+                <a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/marie-sklodowska-curie-actions_en" style="display: flex; align-items: center; justify-content: center; text-decoration: none; color:inherit" target="_blank">
+              Marie Curie Scholarship for Doctorates
+                </a>
+           </li>
+        </ul>
+      </div>
+
+      <!-- FIFTH TILE IN THE LEFT COLUMN -->
+      <!-- LANGUAGES -->
+			<div class="tile">
+				<h3>
+          <img src="./icons/lang.png" alt="lang" class="icon-inline"> 
+          Languages
+        </h3>
+        <ul class="keywords">
+          <li> English, Malayalam - Fluent 
+          <li> French - Intermediate
+        </ul>
+      </div>
+
+    <!-- end of LEFT CNTAINER -->
+		</div> <!-- left-contianer-->
+
+
+  <!-----------RIGHT SIDE -->
+    <div class = "right-container">
+
+      <!-- FIRST TILE IN THE RIGHT COLUMN -->
+      <!-- ABOUT -->
+			<div class="tile" style = "padding-bottom:0.0em">
+        <h2> Profile </h2>
+        <p style="margin-top: -5px;  text-align: justify; margin-left: 0px; margin-right: 0px;"> 
+I hold a PhD in Computational Fluid Mechanics with a strong focus on developing innovative computational tools and open-source software for advanced fluid dynamics simulations. My expertise spans across fluid modeling, numerical methods, and high-performance computing. I am passionate about research that drives technological advancements in the field, with a particular interest in optimizing and refining computational algorithms. <!--My skill set includes proficient coding in languages such as Python, C++, and MATLAB, coupled with strong analytical and mathematical abilities to tackle complex problems. I am dedicated to contributing to the academic and scientific communities through open-source initiatives and collaborative projects.-->
+        </p>
+      </div>
+
+
+	  <div class="tile" style = "padding-bottom:0.2em">
+      <h2> Experience </h2>
+			<div class="timeline-both">
+		    <div class="timeline-each">
+		      <div class="timeline-left">
+             <div class="timeline-line"></div>
+             <div class="timeline-circle"></div>
+		      </div>
+		      <div class="timeline-right">
+            <h3> Doctor Of Philosophy (PhD) </h3>
+            <!-- TITLE -->
+            <p> 
+              <span style = "display: block; font-style: italic;">
+                <a href = "https://theses.fr/2023SORUS741" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+                "Numerical Simulations of Cavitation In Blood Vessels Using Parallel Front Tracking Method"
+                </a>
+              </span>
+              <span style = "display: block; text-align:right">
+                - Supervisor : Dr. Stephane Zaleski
+              </span>
+            </p>
+            <!-- LOCATION -->
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.5em;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/location.png" alt="home" class="icon-inline"> 
+              <a href="https://sciences.sorbonne-universite.fr/sorbonne-universite-campus-pierre-et-marie-curie" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+                Sorbonne University, Paris
+              </a>
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p>  May 2019 - December 2023
+            </div>
+            <!-- DURING >
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.5em; padding-top :0; padding-bottom:0;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p>  May 2019 - December 2023
+              </p>
+            </div-->
+            <!-- DEscription of project --> 
+            <p>
+              <span style = "display: block;">
+              - Research addresses targeted drug delivery using acoustic cavitation of microbubbles, modeled via immersed boundary + front tracking methods for compressible multiphase flows and fluid–structure interactions.
+              </span> 
+              <span style = "display: block;">
+ - The approach is embedded in an adaptive mesh refinement (AMR) framework to capture complex, localized phenomena efficiently.
+              </span> 
+              <span style = "display: block;">
+- Designing scalable partitioning strategies for Eulerian (AMR) and Lagrangian (surface mesh) data structures, ensuring efficient parallel communication.
+              </span> 
+              <span style = "display: block;">
+- A new Lagrangian mesh partitioning scheme, integrated with a front-tracking, VoF-based All-Mach solver handling compressibility and surface tension. 
+              </span> 
+            </p>
+		      </div>
+		    </div>
+        <!-- NEXT EXPERIENCE -->
+		    <div class="timeline-each">
+		      <div class="timeline-left">
+             <div class="timeline-line"></div>
+             <div class="timeline-circle"></div>
+		      </div>
+		      <div class="timeline-right">
+            <h3> Research Project </h3>
+            <!-- TITLE -->
+            <p> 
+              <span style = "display: block; font-style: italic;">
+                "Optimization of Surface Mesh Partition for Interfacial Flows"
+              </span>
+              <span style = "display: block; text-align:right">
+                - Supervisor : Dr. Stephane Zaleski
+              </span>
+            </p>
+            <!-- LOCATION -->
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.5em;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/location.png" alt="home" class="icon-inline"> 
+              <a href="https://sciences.sorbonne-universite.fr/sorbonne-universite-campus-pierre-et-marie-curie" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+                Sorbonne University, Paris
+              </a>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p>
+                Jan 2024 - July 2024
+              </p>
+            </div>
+            <!-- DURING >
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.5em; padding-top :0; padding-bottom:0;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p>
+                Jan 2024 - July 2024
+              </p>
+            </div-->
+            <!-- DEscription of project --> 
+            <p>
+              - Optimisation of mesh partition startegies and communication strategies in interfacial flow simulations involving both surface and volume meshes
+            </p>
+		      </div>
+		    </div>
+        <!-- End of experience block -->
+		  </div> <!--timeline-both-->
+		</div> <!--tile-->
+
+	  <div class="tile" style = "padding-bottom:0.2em">
+      <h2> Education </h2>
+			<div class="timeline-both">
+		    <div class="timeline-each">
+		      <div class="timeline-left">
+             <div class="timeline-line"></div>
+             <div class="timeline-circle"></div>
+		      </div>
+		      <div class="timeline-right">
+            <h3> MTech, Mechanical Engineering</h3>
+            <p> 
+              <span style = "display: block; font-style: italic;">
+                "Simulation of Interfacial Flows using Block-based AMR Meshes"
+              </span>
+              <span style = "display: block; text-align:right">
+                - Supervisor : Dr. Gourav Tomar
+              </span>
+            </p>
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.2em;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/location.png" alt="home" class="icon-inline"> 
+              <a href="https://mecheng.iisc.ac.in" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+                IISc, Bengaluru
+              </a>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p> 2016-2018
+              </p>
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/education.png" alt="cgpa" class="icon-inline">
+              <p> 9.1 CGPA
+              </p>
+            </div>
+            <!-- DURING>
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.2em; padding-top :0; padding-bottom:0;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p> 2016-2018
+              </p>
+            </div -->
+            <!-- CGPA >
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.2em; padding-top :0; padding-bottom:0;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/education.png" alt="cgpa" class="icon-inline">
+              <p> 9.1 CGPA
+              </p>
+            </div-->
+            <!-- DEscription of project > 
+            <p>
+              Project : ""
+            </p-->
+		      </div>
+		      <!--div class="timeline-right">
+            <h3> BTech, Mechanical Engineering</h3>
+            <div class="tile-info" style="display: flex;align-items: center;gap: 0.2em;">
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/location.png" alt="home" class="icon-inline"> 
+              <a href="https://mech.nitk.ac.in/" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+                NITK, Suratkal
+              </a>
+              <img src="./icons/calendar.png" alt="calendar" class="icon-inline">
+              <p> 2012-2016
+              </p>
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+              <img src="./icons/education.png" alt="cgpa" class="icon-inline">
+              <p> 8.99 CGPA
+              </p>
+            </div>
+		      </div-->
+		    </div>
+        <!-- End of experience block -->
+		  </div> <!--timeline-both-->
+		</div> <!--tile-->
+
+	  <div class="tile" style = "padding-bottom:0.2em">
+      <h2> Contact Reference </h2>
+        <p>
+          <span style = "display: block;">
+            1. Dr. Stephane Zaleski
+              <a href="http://www.lmm.jussieu.fr/~zaleski/" style="text-decoration: none; color:inherit" target="_blank">Sorbonne University, UPMC Campus, Paris</a>
+            <img src="./icons/email.png" alt="email" class="icon-inline">
+            <a href="mailto:stephane.zaleski@sorbonne-universite.fr">stephane.zaleski@sorbonne-universite.fr</a>
+          </span>
+          <span style = "display: block;">
+            2. Dr. Stephane Popinet
+              <a href="http://www.dalembert.upmc.fr/home/popinet/" style="text-decoration: none; color:inherit" target="_blank">Sorbonne University, UPMC Campus, Paris</a>
+            <img src="./icons/email.png" alt="email" class="icon-inline">
+            <a href="mailto:popinet@basilisk.fr">popinet@basilisk.fr</a>
+          </span>
+          <span style = "display: block;">
+            3. <a href = "https://mecheng.iisc.ac.in/project/gaurav-tomar/" style="text-decoration: none; color:inherit" target="_blank">
+                Dr
+              </a>
+              Professor, Department of Mechanical Engineering.
+              <a href="https://mecheng.iisc.ac.in/project/gaurav-tomar/" style="text-decoration: none; color:inherit" target="_blank">IISc Bengaluru,</a>
+            <img src="./icons/email.png" alt="email" class="icon-inline">
+            <a href="mailto:gtom@iisc.ac.in">gtom@iisc.ac.in</a>
+          </span>
+        </p>
+		  </div> <!--tile-->
+
+    </div> <!---End of right col-->
+
+  </div>
+  <div class="foot-container">
+    <!-- FIND ME -->       
+    <ul class="find-me">
+      <li>  
+        <a href="https://github.com/basilkottilingal/basilkottilingal.github.io/blob/main/resume.pdf" style="display: flex; align-items: center;justify-content: center; text-decoration: none; color:inherit" target="_blank">
+         resume(pdf)
+        </a>
+      </li>
+      <li>  
+        <a href="https://in.linkedin.com/in/ahmed-basil-2a8b86a0" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+          linkedin
+        </a>
+      </li>
+      <li>  
+        <a href="https://github.com/basilkottilingal" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+          github
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
+  </body>
