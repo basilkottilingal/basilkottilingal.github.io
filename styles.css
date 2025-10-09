@@ -208,22 +208,31 @@ a {
   position: relative;
   width: 100%;
   margin: 0;
-  background: #2B343A;
   gap: 0px;
   padding: 0;
 }
+
+.timeline-both,
+.timeline-left,
+.timeline-right {
+  background: #F9FAFB;
+}
+
 
 .timeline-each {
   position: relative;
   width: 100%;
   display: flex;
   min-height: 50px;
+  transform: none !important;
+  backface-visibility: visible !important;
+  will-change: auto !important;
 }
 
 .timeline-left {
   position: relative;
+  margin: 0;
   width: 5%;
-  background: #F9FAFB;
 }
 
 .timeline-line {
@@ -253,7 +262,6 @@ a {
   height: 100%;
   width: 95%;
   margin: 0;
-  background: #F9FAFB;
   padding: 0.em;
 }
 
