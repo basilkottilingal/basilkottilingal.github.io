@@ -1,0 +1,35 @@
+---
+layout: default
+title: basilkottilingal
+---
+
+<div class="container">
+    <aside class="sidebar">
+        <h1>Ahmed Basil KOTTILINGAL</h1>
+        <p>
+PhD graduate, open-source enthusiast, interested in computational fluids mechanics, high performance computing.
+<!--
+I hold a PhD in Computational Fluid Mechanics with a strong focus on developing innovative computational tools and open-source software for advanced fluid dynamics simulations. My expertise spans across fluid modeling, numerical methods, and high-performance computing. I am passionate about research that drives technological advancements in the field, with a particular interest in optimizing and refining computational algorithms. My skill set includes proficient coding in languages such as Python, C++, and MATLAB, coupled with strong analytical and mathematical abilities to tackle complex problems. I am dedicated to contributing to the academic and scientific communities through open-source initiatives and collaborative projects. -->
+        </p>
+
+        <ul>
+            <li><a href="https://basilkottilingal.github.io">home</a></li>
+            <li><a href="https://github.com/basilkottilingal">github</a></li>
+            <li><a href="https://raw.githubusercontent.com/basilkottilingal/basilkottilingal.github.io/main/resume.pdf">resume</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <h2>Latest Posts</h2>
+
+        <ul>
+        {% for post in site.posts limit:5 %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+            </li>
+        {% endfor %}
+        </ul>
+    </main>
+</div>
+
