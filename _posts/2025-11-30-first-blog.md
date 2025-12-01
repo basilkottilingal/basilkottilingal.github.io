@@ -1,7 +1,7 @@
 
-# Create gihub webpage
+# Create github webpage
 
-Create the github webpage, if not already
+Create the github webpage, if not already, like
 ```bash
 git init
 git add .
