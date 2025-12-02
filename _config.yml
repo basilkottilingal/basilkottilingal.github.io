@@ -7,7 +7,7 @@ tagline:          'My Github Page'
 description:      'PhD graduate, open-source enthusiast, interested in computational fluids mechanics, high performance computing.'
 
 url:              https://basilkottilingal.github.io
-baseurl:          /
+baseurl:          ""
 gems:             
                   -jemoji
 
