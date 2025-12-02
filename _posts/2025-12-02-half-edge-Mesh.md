@@ -1,3 +1,7 @@
+---
+layout: post
+title: Half Edge Mesh
+---
 
 # Front Tracking Method
   Scalable Front Tracking 2D and  3D in AMR.

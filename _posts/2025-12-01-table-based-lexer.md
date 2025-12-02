@@ -1,4 +1,7 @@
-# Table based lexer generator.
+---
+layout: post
+title: Table based lexer generator
+---
 
   If you are interested in developing lexers i.e read source code token by token,
   here is a C based lexer generator that creates a 
@@ -8,11 +11,11 @@
   [flex](https://github.com/westes/flex).For portability, it accepts flex's grammar
   file with few exceptions in the patterns.
 
-# Link 
+### Link 
   
-  The [github](https://github.com/basilkottilingal/lexer/) link is here.
+  The github link is [here](https://github.com/basilkottilingal/lexer/).
 
-# Tokenizer or Lexer reader
+### Tokenizer or Lexer reader
 
   Creates a lexer generator header from a lexer grammar file. 
   The grammar file format is the same as `Flex`'s input file format.
@@ -26,7 +29,9 @@ cd lexer
 make lxr
 ./lxr -o c99.c c99.lex
 ```
-# Input file Format
+
+### Input file Format
+
   Input file format is the same as specified by flex
 ```
 definitions
@@ -91,13 +96,13 @@ foo(?!bar) { /* foo is not followed by bar */ }
 <<EOF>>    { /* flex allows EOF action, but not allowed in this code */ }
 ```
 
-# References, Read More
+### References, Read More
 
-  1. regular expression (regex) are converted to NFA using [Thompson's NFA 
-construction](https://dl.acm.org/doi/abs/10.1145/363347.363387). Minimal
-implementation in C is [here](https://swtch.com/~rsc/regexp/regexp1.html)
-  2. NFA to DFA conversion and minimisation of DFA transition Table using [Hopcroft's
-algorithm](https://www.sciencedirect.com/science/article/abs/pii/B9780124177505500221)
+  1. Regular expressions (regex) are converted to NFA using
+[Thompson's NFA construction](https://dl.acm.org/doi/abs/10.1145/363347.363387).
+A minimal implementation in C is found [here](https://swtch.com/~rsc/regexp/regexp1.html)
+  2. NFA to DFA conversion and minimisation of DFA transition Table using
+[Hopcroft's algorithm](https://www.sciencedirect.com/science/article/abs/pii/B9780124177505500221)
 ```
 Hopcroft, J. E.
 “An n log n algorithm for minimizing states in a finite automaton.”

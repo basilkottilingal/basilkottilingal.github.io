@@ -1,7 +1,9 @@
+---
+layout: post
+title: Create github webpage
+---
 
-# Create github webpage
-
-Create the github webpage, if not already, like
+Create your github webpage, if not already, using following git commands
 ```bash
 git init
 git add .
@@ -11,9 +13,9 @@ git remote add origin https://github.com/basilkottilingal/basilkottilingal.githu
 git push -u origin main
 ```
 
-# Jekyl website
+### Jekyl website
 
-A blog like jekyll page is implemented.
+A blog like page is implemented using jekyll.
 
 | Folder  File     | What it does                                     |
 | ----------------- | ------------------------------------------------ |
@@ -21,13 +23,13 @@ A blog like jekyll page is implemented.
 | `_layouts/`   | HTML templates that pages/posts use              |
 | `_posts/*`     | Blog articles (Markdown), auto-handled by Jekyll |
 
-# Test webpage locally
+### Test webpage locally
 
-Install jekyll and bundler
+You may test the webpage locally by installing jekyll and bundler
 ```bash
 gem install jekyll bundler
-jekyll new username.github.io
-cd username
+jekyll new basilkottilingal.github.io
+cd basilkottilingal.github.io
 ```
 
 Inside the repo
@@ -35,16 +37,12 @@ Inside the repo
 bundle init
 bundle add jekyll
 bundle install
-```
-
-Initialize jekyll server
-```bash
 bundle exec jekyll serve
 ```
 
 Now open the page `http://localhost:4000`
 
-## Install Jekyll using rbenv
+### Install Jekyll using rbenv
 
 In case system Ruby (installed via APT package manager) conflicts with Bundler gems,
 you can install Jekyll using rbenv.
@@ -87,8 +85,15 @@ bundle add jekyll
 bundle install
 bundle exec jekyll serve
 ```
-Open in browser:
+Open the page in a browser:
 
 ```
 http://localhost:4000
 ```
+
+### Beautifying your webpage using [Hyde](https://hyde.getpoole.com/)
+
+Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a
+prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+Poole is the Jekyll Butler, serving as an upstanding and effective
+foundation for Jekyll themes by [@mdo](https://twitter.com/mdo).

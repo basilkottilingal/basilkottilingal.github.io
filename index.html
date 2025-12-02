@@ -1,35 +1,38 @@
 ---
 layout: default
-title: basilkottilingal
+title: Home
 ---
 
-<div class="container">
-    <aside class="sidebar">
-        <h1>Ahmed Basil KOTTILINGAL</h1>
-        <p>
-PhD graduate, open-source enthusiast, interested in computational fluids mechanics, high performance computing.
-<!--
-I hold a PhD in Computational Fluid Mechanics with a strong focus on developing innovative computational tools and open-source software for advanced fluid dynamics simulations. My expertise spans across fluid modeling, numerical methods, and high-performance computing. I am passionate about research that drives technological advancements in the field, with a particular interest in optimizing and refining computational algorithms. My skill set includes proficient coding in languages such as Python, C++, and MATLAB, coupled with strong analytical and mathematical abilities to tackle complex problems. I am dedicated to contributing to the academic and scientific communities through open-source initiatives and collaborative projects. -->
-        </p>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-        <ul>
-            <li><a href="https://basilkottilingal.github.io">home</a></li>
-            <li><a href="https://github.com/basilkottilingal">github</a></li>
-            <li><a href="https://raw.githubusercontent.com/basilkottilingal/basilkottilingal.github.io/main/resume.pdf">resume</a></li>
-        </ul>
-    </aside>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <main class="content">
-        <h2>Latest Posts</h2>
+    {{ post.content | strip_html | truncate: 150 }}
 
-        <ul>
-        {% for post in site.posts limit:5 %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-            </li>
-        {% endfor %}
-        </ul>
-    </main>
+  </div>
+  {% endfor %}
 </div>
 
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

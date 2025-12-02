@@ -1,2 +1,26 @@
-title:             My GitHub Page
-description:       My site powered by Jekyll
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Ahmed Basil KOTTILINGAL
+tagline:          'My Github Page'
+description:      'PhD graduate, open-source enthusiast, interested in computational fluids mechanics, high performance computing.'
+
+url:              https://basilkottilingal.github.io
+baseurl:          /
+gems:             
+                  -jemoji
+
+author:
+  name:           'Ahmed Basil KOTTILINGAL'
+  url:            https://github.com/basilkottilingal
+
+paginate:         5
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+#version:          2.1.0
+
+github:
+  repo:           https://github.com/basilkottilingal
