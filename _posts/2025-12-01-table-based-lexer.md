@@ -69,7 +69,7 @@ user code
 | `$`      | End anchor   | Matches the **end of a line**                                           |
 | `[...]`  | Character class  | Matches **any one character** in the set                            |
 | `[^...]` | Negated character class  | Matches **any one character not** in the set                |
-| `\|`     | Alternation  | Matches **either of the pattern** before o after `\|` in the current group |
+| `|`      | Alternation  | Matches **either of the pattern** before or after `|` in the current group |
 | `()`     | Grouping     | Groups expressions as a single unit, affects alternation and repetition |
 | `*`      | Zero or more | Matches **zero or more** repetitions of the preceding expression        |
 | `+`      | One or more  | Matches **one or more** repetitions of the preceding expression         |

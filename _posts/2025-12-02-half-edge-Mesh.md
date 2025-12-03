@@ -3,52 +3,6 @@ layout: post
 title: Half Edge Mesh
 ---
 
-# Front Tracking Method
-  Scalable Front Tracking 2D and  3D in AMR.
-	This is implimented in basilisk.fr/ .
-	Visit and install basilisk.fr/ .
-  Clone this repository by 
-  $ git clone git@github.com:basilkottilingal/FT.git
-
-##	Status.
-  !Not yet compilable
-
-# Follow these basic rules
-	(1) Should be minimal, commented and intended according to basilisk.fr rule.
-	(2) Build on extra source files only after there is enough testcases to estblish whatever is already there.
-
-# Still in Developing Mode
-	As of now, The code is being is imported from the Current Stable 2D version which can be installed as below.
-	$ mkdir FT2D
-	$ cd FT2D
-	$ git init
-	$ git remote add origin git@github.com:basilkottilingal/FT2D.git
-	$ git pull origin main
-
-# 04/01/2024: Currently working on 
-##	Long term objectives 
-		(1) Regrid Parallel
-##	Short term objectives (NOTE: very minimal headr files).
-	  (1) Advection and Rebalance in serial only. 
-		(2) the new partition method.
-			In this rank of vertex = rank of owner cell of the vertex.
-			rank of element = min of (ranks of it's vertices.)
-		(3) Draw the headerfile dependencies.
-		(4) 
-## Later
-		(1) Common routines for front elements and points.
-		    Add, delete, foreach, foreach_all, is_local,
-
-## Documentation
-	-For immediate reference, use the Docs/documentation.pdf 
-		(https://github.com/basilkottilingal/FT/tree/main/Docs/doc.pdf)
-	-You can update the above mentioned Docs/doc.pdf using 
-		$ cd Docs && make update
-	-Read more here:
-		https://github.com/basilkottilingal/FMPI_JCP
-		https://github.com/basilkottilingal/OverleafDocu
-		http://www.basilisk.fr
-
 ### Eulerian Mesh. AMR Grid.
 
 *Quadtrees* in 2D and *octrees* in  3D are a 
@@ -59,15 +13,15 @@ are called *cells*. Every internal node has $2^{D}$
 children nodes called as *children*. So
 every internal node is the (only) *parent* to it's $2^{D}$
 children. 
-}$
 <p align="center">
 <img src="./Doc/jpg/quadtree.internal.jpg" width=25% height=25%>
 <img src="./Doc/jpg/quadtree.extended.jpg" width=25% height=25%>
 </p>
-<figcaption> (Fig 1(a),(b). (a): Cells  $\mathcal{C}$ of the quadtree $\Graph{T}$ is 
+<figcaption> (Fig 1(a),(b). (a): The set of cells  $\mathcal{C}$ of the 
+quadtree $\mathcal{T}$ is 
 the union of internal cells $\mathcal{I}$ in blue and the leaf cells 
-$\mathcal{L}$ in red. (b): All-Cells  $\overbar{\mathcal{C}}$ of the 
-parent quadtree $\overbar{\Graph{T}}$ is 
+$\mathcal{L}$ in red. (b): All-Cells  $\overline{\mathcal{C}}$ of the 
+parent quadtree $\overline{\mathcal{T}}$ is 
 the union of internal cells $\mathcal{I}$ in blue, the leaf cells 
 $\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green) </figcaption>
 
@@ -146,7 +100,7 @@ If there are $|\mathcal{V}|$ vertices and $|\mathcal{E}|$ triangular elements,
 then we have their sets written as 
 $\mathcal{V}:=`{v_0,v_1,...`}$ and	
 $\mathcal{E}:=`{e_0,e_2,...`}\subset{\mathcal{V}}^3$.
-where their res (v_{i_0},v_{i_1},v_{i_2})\in{\mathcal{V}}^3`}$
+where their res $(v_{i_0},v_{i_1},v_{i_2})\in{\mathcal{V}}^3`}$
 
 Each triangle $e_i:=(v_{i_0},v_{i_1},v_{i_2})$ is comprised of 3 
 cyclically ordered vertices $v_{i_0}$, $v_{i_1}$ and  $v_{i_2}$. Except for the triangles whose 
@@ -155,7 +109,7 @@ share its edges  with three other distinct triangles
 $e_{i_0}, e_{i_1}, e_{i_2} \in \mathcal{E}$ which are called the
 neighbors of $e_i$. Thus, we have a set of tuples of neighbors 
 and their corresponding graph is defined as 
-$\mathcal{N}:=`{n_i=(e_{i_0},e_{i_1},e_{i_2})`}\subset{\mathcal{V}}^3$
+$\mathcal{N}:=\{ n_i=(e_{i_0},e_{i_1},e_{i_2}) \}\subset{\mathcal{V}}^3$
 
 Even though $\mathcal{N}$ is redundant from the definition of $\mathcal{V}$ and 
 $\mathcal{E}$ ($\mathcal{N}$ can always be derived from $\mathcal{V}$ and $\mathcal{E}$
