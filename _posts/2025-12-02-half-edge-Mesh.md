@@ -5,7 +5,9 @@ title: Half Edge Mesh
 
 ### Eulerian Mesh. AMR Grid.
 
+<!--
 jjj{% raw %} $\\{a, b, c\\}$ {% endraw %} kk
+--!>
 
 *Quadtrees* in 2D and *octrees* in  3D are a 
 hierarchical graph used to discretize computational domains 
