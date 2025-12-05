@@ -5,6 +5,8 @@ title: Half Edge Mesh
 
 ### Eulerian Mesh. AMR Grid.
 
+jjj{% raw %} $\\{a, b, c\\}$ {% endraw %} kk
+
 *Quadtrees* in 2D and *octrees* in  3D are a 
 hierarchical graph used to discretize computational domains 
 as in Fig:2(a)(b) 
@@ -13,24 +15,33 @@ are called *cells*. Every internal node has $2^{D}$
 children nodes called as *children*. So
 every internal node is the (only) *parent* to it's $2^{D}$
 children. 
-<p align="center">
-<img src="./Doc/jpg/quadtree.internal.jpg" width=25% height=25%>
-<img src="./Doc/jpg/quadtree.extended.jpg" width=25% height=25%>
-</p>
-<figcaption> (Fig 1(a),(b). (a): The set of cells  $\mathcal{C}$ of the 
+
+{:refdef: style="display:flex; flex-direction:column; align-items:center; text-align:center;"}
+<figure style="text-align:center;">
+  <div style="display:flex; justify-content:center; gap:20px; width:100%;">
+  <img src="{{ site.baseurl }}/assets/jpg/quadtree.internal.jpg" style="width:30%; object-fit:cover;">
+  <img src="{{ site.baseurl }}/assets/jpg/quadtree.extended.jpg" style="width:30%; object-fit:cover;">
+  </div>
+  <figcaption><em> Fig 1(a)-(b). The set of cells  $\mathcal{C}$ of the 
 quadtree $\mathcal{T}$ is 
 the union of internal cells $\mathcal{I}$ in blue and the leaf cells 
 $\mathcal{L}$ in red. (b): All-Cells  $\overline{\mathcal{C}}$ of the 
 parent quadtree $\overline{\mathcal{T}}$ is 
 the union of internal cells $\mathcal{I}$ in blue, the leaf cells 
-$\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green) </figcaption>
+$\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green)</em></figcaption>
+</figure>
+{:refdef}
 
-<p align="center">
-<img src="./Doc/jpg/graph.partition.jpg" width=25% height=25%>
-<img src="./Doc/jpg/graph.partition.extended.jpg" width=25% height=25%>
-</p>
-<figcaption> (Fig 2(a),(b). Hierarchical structure of tree and parent tree
-mentioned in Fig 1</figcaption>
+{:refdef: style="display:flex; flex-direction:column; align-items:center; text-align:center;"}
+<figure>
+  <div style="display:flex; justify-content:center; gap:20px; width:100%;">
+  <img src="{{ site.baseurl }}/assets/jpg/graph.partition.jpg" style="width:30%; object-fit:cover;">
+  <img src="{{ site.baseurl }}/assets/jpg/graph.partition.extended.jpg" style="width:30%; object-fit:cover;">
+  </div>
+  <figcaption><em> Fig 2(a)-(b). Hierarchical structure of tree and parent tree
+mentioned in Fig 1</em></figcaption>
+</figure>
+{:refdef}
 
 A cell or a node of a {tree} can be represented as $c$ which can be 
 represented as a tuple, $c:=(i,j,l)$ in 2D or $c:=(i,j,k,l)$ in 3D, 
@@ -61,12 +72,17 @@ which is defined as $\overline{\mathcal{C}}:=\mathcal{H}\cup\mathcal{I}\cup\math
 The corresponding tree is called as a parent-tree $\overline{\mathcal{T}}$.
 The sets of internal-cells, leaves and halo cells of
 a extended quadtree are represented in Fig:1(b).
-	  
-<p align="center">
-<img src="./Doc/jpg/cell.cell.jpg" width=25% height=25%>
-<img src="./Doc/jpg/cell.neighborhood.jpg" width=25% height=25%>
-<figcaption> (Fig 3(a),(b)) </figcaption>
-</p>
+
+
+{:refdef: style="display:flex; flex-direction:column; align-items:center; text-align:center;"}
+<figure style="text-align:center;">
+  <div style="display:flex; justify-content:center; gap:20px; width:100%;">
+  <img src="{{ site.baseurl }}/assets/jpg/cell.cell.jpg" style="width:30%; object-fit:cover;">
+  <img src="{{ site.baseurl }}/assets/jpg/cell.neighborhood.jpg" style="width:30%; object-fit:cover;">
+  </div>
+<figcaption><em> Fig 3(a)-(b). </em> </figcaption>
+</figure>
+{:refdef}
 
 The scalars in halo cells are calculated by an *prolongation*
 operation from their parent leaf cell. So there is a set prolongation leaf 
@@ -79,13 +95,16 @@ whose set is represented as $\mathcal{R} \subset \mathcal{I}$.
    
 ## Lagrangian Mesh: Front or Connected Traingular Mesh
 
-<p align="center">
-<img src="./Doc/jpg/front3d.jpg" width=40% height=40%>
-<figcaption> 
-(Fig 4: A spherical interface is represented here 
-where  the interface is constructed by  connected oriented triangular patches.)
-</figcaption>
-</p>
+{:refdef: style="display:flex; flex-direction:column; align-items:center; text-align:center;"}
+<figure style="text-align:center;">
+  <div style="display:flex; justify-content:center; gap:20px; width:100%;">
+  <img src="{{ site.baseurl }}/assets/jpg/front3d.jpg"  style="width:30%; object-fit:cover;"> 
+  </div>
+  <figcaption> <em> Fig 4: A spherical interface is represented here 
+  where  the interface is constructed by  connected oriented triangular patches.
+  </em> </figcaption>
+</figure>
+{:refdef}
 
 An interface can be well represented by a front which is comprised 
 of connected oriented triangular elements
