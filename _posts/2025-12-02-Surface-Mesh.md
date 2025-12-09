@@ -5,10 +5,6 @@ title: Half Edge Mesh
 
 ### Eulerian Mesh. AMR Grid.
 
-<!--
-jjj{% raw %} $\\{a, b, c\\}$ {% endraw %} kk
---!>
-
 *Quadtrees* in 2D and *octrees* in  3D are a 
 hierarchical graph used to discretize computational domains 
 as in Fig:2(a)(b) 
@@ -24,13 +20,16 @@ children.
   <img src="{{ site.baseurl }}/assets/jpg/quadtree.internal.jpg" style="width:30%; object-fit:cover;">
   <img src="{{ site.baseurl }}/assets/jpg/quadtree.extended.jpg" style="width:30%; object-fit:cover;">
   </div>
-  <figcaption><em> Fig 1(a)-(b). The set of cells  $\mathcal{C}$ of the 
+  <figcaption>
+  <em> Fig 1(a)-(b). The set of cells  $\mathcal{C}$ of the 
 quadtree $\mathcal{T}$ is 
 the union of internal cells $\mathcal{I}$ in blue and the leaf cells 
 $\mathcal{L}$ in red. (b): All-Cells  $\overline{\mathcal{C}}$ of the 
 parent quadtree $\overline{\mathcal{T}}$ is 
 the union of internal cells $\mathcal{I}$ in blue, the leaf cells 
-$\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green)</em></figcaption>
+$\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green)
+  </em>
+  </figcaption>
 </figure>
 {:refdef}
 
@@ -40,8 +39,11 @@ $\mathcal{L}$ in red and halo cells $\mathcal{H}$ in green)</em></figcaption>
   <img src="{{ site.baseurl }}/assets/jpg/graph.partition.jpg" style="width:30%; object-fit:cover;">
   <img src="{{ site.baseurl }}/assets/jpg/graph.partition.extended.jpg" style="width:30%; object-fit:cover;">
   </div>
-  <figcaption><em> Fig 2(a)-(b). Hierarchical structure of tree and parent tree
-mentioned in Fig 1</em></figcaption>
+  <figcaption>
+  <em> Fig 2(a)-(b). Hierarchical structure of tree and parent tree
+mentioned in Fig 1
+  </em>
+  </figcaption>
 </figure>
 {:refdef}
 
@@ -82,7 +84,10 @@ a extended quadtree are represented in Fig:1(b).
   <img src="{{ site.baseurl }}/assets/jpg/cell.cell.jpg" style="width:30%; object-fit:cover;">
   <img src="{{ site.baseurl }}/assets/jpg/cell.neighborhood.jpg" style="width:30%; object-fit:cover;">
   </div>
-<figcaption><em> Fig 3(a)-(b). </em> </figcaption>
+  <figcaption>
+  <em> Fig 3(a)-(b). 
+  </em>
+  </figcaption>
 </figure>
 {:refdef}
 
@@ -119,8 +124,8 @@ $\mathcal{M} :=  (\mathcal{V}, \mathcal{E}, \mathcal{N})$
 
 If there are $|\mathcal{V}|$ vertices and $|\mathcal{E}|$ triangular elements,
 then we have their sets written as 
-$\mathcal{V}:=`{v_0,v_1,...`}$ and	
-$\mathcal{E}:=`{e_0,e_2,...`}\subset{\mathcal{V}}^3$.
+{% raw %} $\mathcal{V} := \\{v_0,v_1,...\\}$ {% endraw %} and	
+{% raw %} $\mathcal{E} := \\{e_0,e_2,...\\} \subseteq {\mathcal{V}}^3$ {% endraw %} .
 where their res $(v_{i_0},v_{i_1},v_{i_2})\in{\mathcal{V}}^3`}$
 
 Each triangle $e_i:=(v_{i_0},v_{i_1},v_{i_2})$ is comprised of 3 
