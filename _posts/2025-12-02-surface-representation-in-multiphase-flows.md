@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Half Edge Mesh
+title: Surface Representation in Multiphase Flows
 ---
 
 ### Eulerian Mesh. AMR Grid.
@@ -47,7 +47,7 @@ mentioned in Fig 1
 </figure>
 {:refdef}
 
-A cell or a node of a {tree} can be represented as $c$ which can be 
+A cell or a node of a tree can be represented as $c$ which can be 
 represented as a tuple, $c:=(i,j,l)$ in 2D or $c:=(i,j,k,l)$ in 3D, 
 where $i,j,k\in$ { $0,1,..,2^{l}-1$ } are spatial indices of the cell 
 corresponding to each dimension of $\mathbb{R}^D$ and 
