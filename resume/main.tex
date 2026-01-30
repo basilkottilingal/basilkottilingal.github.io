@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{}{Ahmed Basil KOTTILINGAL}{
+\href{mailto:basilkottilingal@gmail.com}{basilkottilingal@gmail.com} | +33 614744006\\
+\urlstyle{same}\url{https://basilkottilingal.github.io} | \href{https://github.com/basilkottilingal}{github.com/basilkottilingal} \\ 
+\url{https://linkedin.com/in/ahmed-basil-2a8b86a0}\\
+\custombold{Data Analyst} | \custombold{Scientific Computing \& High Performance Computing Engg} | \custombold{Fluid Mechanics Engg}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.48\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\runsubsection{\href{https://www.sorbonne-universite.fr/}{Sorbonne University}\\}
+\descript{Doctor of Philosophy}
+\location{December 2023 | Paris, France }
+\sectionsep
+
+\runsubsection{\href{https://iisc.ac.in}{Indian Institute of Science}\\}
+\descript{Masters in Mechanical Engineering}
+\location{October 2018 | GPA: 9.1/10.0 | Bengaluru, India }
+\sectionsep
+
+\runsubsection{\href{https://www.nitk.ac.in/}{National Institute of Technology Karnataka}\\}
+\descript{Bachelors in Mechanical Engineering}
+\location{May 2016 | GPA: 8.99/10.0 | Surathkal, India }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{\href{https://www.dalembert.upmc.fr/ijlrda/}{Institut Jean Le Rond d'Alembert - Sorbonne University}}
+\descript{| Researcher}
+%\descript{| \textit{"Numerical Simulations of Cavitation In Blood Vessels Using Parallel Front Tracking Method"} }
+\location{May 2019 – Dec 2023 | Paris, France}
+\location{Jan 2024 – July 2024 | Paris, France}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Research addresses targeted drug delivery using acoustic cavitation of
+microbubbles, modeled via immersed boundary + front tracking methods for
+compressible multiphase flows and fluid–structure interactions.
+\item The approach is embedded in an adaptive mesh refinement (AMR) framework to
+capture complex, localized phenomena efficiently.
+\item Designing scalable partitioning strategies for Eulerian (AMR) and Lagrangian
+(surface mesh) data structures, ensuring efficient parallel communication.
+\item A new Lagrangian mesh partitioning scheme, integrated with a front-tracking, VoF-
+based All-Mach solver handling compressibility and surface tension
+\item \href{https://theses.fr/2023SORUS741}{https://theses.fr/2023SORUS741}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Physics of Fluids department, University of Twente}
+\descript{| Researcher}
+\location{June 2015 – Aug 2015 | Twente, Netherlands}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item fixm
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Column 2
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.49\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\custombold{Programming:} C \textbullet{} UNIX shell \textbullet{} C++ \textbullet{} JavaScript \textbullet{} Python \textbullet{} \LaTeX
+\\
+\custombold{Web Technologies:} HTML \textbullet{} CSS \textbullet{} WebSocket Server
+\\
+\custombold{Data Structures and Analysis:} Tree Data Structure \textbullet{} Graph Partition Algorithms \textbullet{} Python Pandas
+\\
+\custombold{Formal Language:} Lexer and Parser  Development
+\\
+\custombold{High Performance Computing:} MPI \textbullet{} OpenMP \textbullet{} CUDA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{b-AMR based Multiphase Flow Solver}
+\descript{| }
+\begin{tightemize}
+\item fixme
+\end{tightemize}
+
+\runsubsection{F2V}
+\descript{| Front to Volume [1]}
+\begin{tightemize}
+\item Exact computation of the color function for triangular element interfaces
+\item Calculate volume in a cube subtended by a triangulated surface mesh. Application in fluid simulation, computer graphics.
+\end{tightemize}
+
+\runsubsection{Lexer}
+\descript{| Table based lexer generator}
+\begin{tightemize}
+\item Implemented table based lexer generator that converts regex-based token, enabling fast and deterministic lexical analysis for custom languages.
+\item \href{https://github.com/basilkottilingal/lexer/}{https://github.com/basilkottilingal/lexer/}
+\end{tightemize}
+
+\section{Presentations}
+\runsubsection{USNCCM16 2021}
+\descript{| (virtual), Chicago, USA}
+\location{A Scalable Adaptive Front-Tracking Method for Simulation of Multiphase Flow}
+
+\runsubsection{ECCOMAS 2022}
+\descript{| Oslo, Norway}
+\location{Simulation of Micro Bubble Cavitation in Blood Vessels}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+\href{https://doi.org/10.48550/arXiv.2501.04744}
+{[1] J. Pan, D. A. Koffi Bi, \custombold{A. B. Kottilingal}, S. Costanzo, J. Lu, Y. Ling, R. Scardovelli, G. Tryggvason, and S. Zaleski.
+\textbf{"Exact computation of the color function for triangular element interfaces."} \textit{arXiv preprint} arXiv:2501.04744}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACHIEVEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements}
+\begin{tabular}{rll}
+2016	     & top 83/197,789  & \href{https://gate.iisc.ac.in/}{GATE Mechanical Engg}\\
+2019	     & Qualified  & \href{https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks}{Marie-Curie Fellowship}\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     iLANGUAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Languages}
+\custombold{English} Fluent \textbullet{} \custombold{French} Intermediate
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     REFERENECES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Reference}
+\sectionsep
+\begin{tightemize}
+\item \custombold{Stephane Zaleski}, Sorbonne University, Paris. \\ \href{mailto:stephane.zaleski@sorbonne-universite.fr}{stephane.zaleski@sorbonne-universite.fr}
+\item \custombold{Stephane Popinet}, Sorbonne University, Paris. \\ \href{mailto:popinet@basilisk.fr}{popinet@basilisk.fr}
+\end{tightemize}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
