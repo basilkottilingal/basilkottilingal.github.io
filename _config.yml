@@ -16,11 +16,11 @@ author:
   url:            https://github.com/basilkottilingal
 
 paginate:         5
-plugins:
-  - jekyll-paginate
+paginate_path:    "/page:num/"
+plugins:          - jekyll-paginate
 
 # Custom vars
 #version:          2.1.0
 
 github:
-  repo:           https://github.com/basilkottilingal
+  repo:            https://github.com/basilkottilingal
